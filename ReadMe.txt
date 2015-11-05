@@ -10,27 +10,23 @@ The metronome presents a simple interface. Drag the arm horizontally to start th
 ===========================================================================
 BUILD REQUIREMENTS:
 
-Mac OS X 10.5.3, Xcode 3.1, iPhone OS 2.0
+Mac OS X 10.5.6, Xcode 3.1, iPhone OS 3.0
 
 ===========================================================================
 RUNTIME REQUIREMENTS:
 
-Mac OS X 10.5.3, iPhone OS 2.0
+Mac OS X 10.5.6, iPhone OS 3.0
 
 ===========================================================================
 PACKAGING LIST:
 
 MetronomeAppDelegate.h
 MetronomeAppDelegate.m
-UIApplication's delegate. On start up, this object receives the applicationDidFinishLaunching: delegate message and creates an instance of RootViewController. The RootViewController in turn creates an instance of MetronomeViewController and installs its view (the front side of the application) as a subview of the application's window. The MetronomeAppDelegate is also in charge of saving and restoring the user's time signature preference in user defaults.
-
-RootViewController.h
-RootViewController.m
-Top-level view controller in the Metronome application. It causes the primary UI of the Metronome application to be loaded and responds to user actions to flip from the primary interface to the preferences interface and back. It also keeps this application from rotating in response to device orientation changes.
+UIApplication's delegate. On start up, this object receives the applicationDidFinishLaunching: delegate message and creates an instance of MetronomeViewController and installs its view (the front side of the application) as a subview of the application's window. The MetronomeAppDelegate is also in charge of saving and restoring the user's time signature preference in user defaults.
 
 MetronomeViewController.h
 MetronomeViewController.m
-Controls the Metronome view, which is loaded from MetronomeView.nib. It also installs the "i" button, which displays the application preferences.
+Creates and controls the Metronome view.
 
 MetronomeView.h
 MetronomeView.m
@@ -38,11 +34,7 @@ This view builds the primary application UI. It also implements the touches... m
 
 PreferencesViewController.h
 PreferencesViewController.m
-Controls the Preferences View, which is loaded from PreferencesView.nib. It also installs the UINavigationBar that displays the application name and Done button.
-
-PreferencesView.h
-PreferencesView.m
-This view builds and displays the application preferences UI. In preferences, you can set the sound volume and time signature preferences.
+Controls the Preferences View, which is loaded from PreferencesView.nib. In preferences, you can set the sound volume and time signature preferences.
 
 SoundEffect.h
 SoundEffect.m
@@ -51,17 +43,20 @@ A simple Objective-C wrapper around Audio Services functions that allow the load
 MainWindow.xib
 Interface Builder 'nib' file that provides the window for the application.
 
-MetronomeView.xib
-Nib file that provides the view for the front side of the application.
-
 PreferencesView.xib
 Nib file that provides the view for the preferences side of the application.
 
-main.m
-Entry point for the application. Creates the application object and causes the event loop to start.
-
 ===========================================================================
 CHANGES FROM PREVIOUS VERSIONS:
+
+Version 2.2
+- Added invocation of prepareToPlay after configuring audio players.
+
+Version 2.1
+- Corrected a minor display artifact.
+
+Version 2.0
+- Updated for and tested with iPhone OS 3.0.
 
 Version 1.7
 - Updated for and tested with iPhone OS 2.0. First public release.
@@ -99,4 +94,4 @@ Version 1.1:
 - General code clean-up
 
 ===========================================================================
-Copyright (C) 2008 Apple Inc. All rights reserved.
+Copyright (C) 2008-9 Apple Inc. All rights reserved.
