@@ -10,12 +10,12 @@ The metronome presents a simple interface. Drag the arm horizontally to start th
 ===========================================================================
 BUILD REQUIREMENTS:
 
-Mac OS X 10.5.6, Xcode 3.1, iPhone OS 3.0
+iOS 4.0 SDK
 
 ===========================================================================
 RUNTIME REQUIREMENTS:
 
-Mac OS X 10.5.6, iPhone OS 3.0
+iPhone OS 3.2 or later
 
 ===========================================================================
 PACKAGING LIST:
@@ -48,6 +48,9 @@ Nib file that provides the view for the preferences side of the application.
 
 ===========================================================================
 CHANGES FROM PREVIOUS VERSIONS:
+
+Version 2.5
+- Upgraded project to build with the iOS 4.0 SDK.
 
 Version 2.2
 - Added invocation of prepareToPlay after configuring audio players.
@@ -94,4 +97,4 @@ Version 1.1:
 - General code clean-up
 
 ===========================================================================
-Copyright (C) 2008-9 Apple Inc. All rights reserved.
+Copyright (C) 2008-2010 Apple Inc. All rights reserved.
